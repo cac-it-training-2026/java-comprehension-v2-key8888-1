@@ -9,6 +9,8 @@ class Member {
 	int age;
 	int rank;
 
+	
+
 	public void showMember() {
 		System.out.println("***MEMBER DATA***");
 		System.out.println("name:" + this.name);
