@@ -32,24 +32,6 @@ public class SystemMain02 {
 
 		MemberManager.showAllMembers(members);
 
-		Member member = new Member();
-
-		// 各setterで値を設定
-		int testId = 101;
-		String testPassword = "default_pass";
-		String testName = "デフォルトメンバー";
-		int testAge = 20;
-		int testRank = 5;
-
-		member.setId(testId);
-		member.setPassword(testPassword);
-		member.setName(testName);
-		member.setAge(testAge);
-		member.setRank(testRank);
-
-		System.out.println(member.getCoupons());
-		System.out.println(member.getAge());
-
 	}
 
 }

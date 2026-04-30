@@ -9,7 +9,7 @@ public class Member {
 	private String name;
 	private int age;
 	private int rank;
-	private static List<Coupon> coupons;
+	private List<Coupon> coupons;
 
 	/**
 	 * @return id
@@ -92,7 +92,7 @@ public class Member {
 	 * @param coupons セットする coupons
 	 */
 	public void setCoupons(List<Coupon> coupons) {
-		Member.coupons = coupons;
+		this.coupons = coupons;
 	}
 
 	/**
@@ -111,11 +111,12 @@ public class Member {
 		this.age = age;
 		this.rank = rank;
 
-		Coupon cu[] = { new Coupon(1, 0.5, "最初の特典"), new Coupon(2, 0.25, "今月の特典") };
-		coupons = new ArrayList<Coupon>();
-		coupons.add(cu[0]);
-		coupons.add(cu[1]);
-		coupons = new ArrayList<Coupon>();
+		//		Coupon cu[] = { new Coupon(1, 0.5, "最初の特典"), new Coupon(2, 0.25, "今月の特典") };
+		//		coupons = new ArrayList<Coupon>();
+		//		coupons.add(cu[0]);
+		//		coupons.add(cu[1]);
+		//		coupons = new ArrayList<Coupon>();
+		this.coupons = new ArrayList<Coupon>();
 
 	}
 
@@ -135,13 +136,18 @@ public class Member {
 	}
 
 	public static Member getInstance(int id, String password, String name, int age, int rank) {
-		new Coupon();
-		new Coupon();
-		Coupon cuIns[] = { Coupon.getInstance(1, 0.5, "最初の特典"), Coupon.getInstance(2, 0.25, "今月の特典") };
-		coupons = new ArrayList<Coupon>();
-		coupons.add(cuIns[0]);
-		coupons.add(cuIns[1]);
-		return new Member(id, password, name, age, rank);
+		//		new Coupon();
+		//		new Coupon();
+		//		Coupon cuIns[] = { Coupon.getInstance(1, 0.5, "最初の特典"), Coupon.getInstance(2, 0.25, "今月の特典") };
+		//		coupons = new ArrayList<Coupon>();
+		//		coupons.add(cuIns[0]);
+		//		coupons.add(cuIns[1]);
+		//		return new Member(id, password, name, age, rank);
+		Member m = new Member(id, password, name, age, rank);
+		m.coupons.add(Coupon.getInstance(1, 0.5, "最初の特典"));
+		m.coupons.add(Coupon.getInstance(2, 0.25, "今月の特典"));
+
+		return m;
 	}
 
 }
