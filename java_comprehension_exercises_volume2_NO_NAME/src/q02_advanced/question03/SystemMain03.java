@@ -11,7 +11,7 @@ public class SystemMain03 {
 		//		boolean isLogin = false;
 		//TODO ここから実装する
 
-		// 入力を求める
+		// 入力を求める.
 		ConsoleReader cr = new ConsoleReader();
 
 		int id = 0;
